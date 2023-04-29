@@ -33,11 +33,19 @@ public class Pizza {
 		this.price+=addExtraCheezeprice;
 	}
 	
+	public void addExtraToppings() {
+		isextraToppinngsAdded=true;
+		this.price+=addExtraToppingPrice;
+	}
+	
 	public void getBill() {
 		String bill="";
 		System.out.println("Pizza "+basePizzaPrice);
 		if(isextraCheezAdded) {
 			bill="extra cheez added +"+addExtraCheezeprice+"\n ";	
+		}
+		if(isextraToppinngsAdded) {
+			bill+="extra Topping added "+addExtraToppingPrice+"\n";
 		}
 		bill+="Bill "+this.price+" \n";
 		System.out.println(bill);
